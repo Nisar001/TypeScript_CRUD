@@ -18,7 +18,7 @@ const EmployeeSchema = new mongoose.Schema({
    },
    doj: {
       type: String,
-   },
+   }
 },{
    timestamps: true,
 });

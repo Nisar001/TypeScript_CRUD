@@ -2,6 +2,7 @@ import express from 'express'
 import { EmployeeModel } from '../model/EmployeeModel'
 
 class EmployeeController{
+   
    getAllEmployee = async(request: express.Request, response: express.Response) => {
       try {
          const employees = await EmployeeModel.find();
@@ -23,16 +24,16 @@ class EmployeeController{
 
    createEmployee = async(request: express.Request, response: express.Response) => {
       try {
-         const {name, email, mobile, dob, doj} = request.body;
+         const {name, email, mobile, dob, doj, password} = request.body;
          const employee = new EmployeeModel({
             name,
             email,
             mobile,
             dob,
-            doj
+            doj,
          });
          await employee.save();
-         return response.status(201).json({message: "Employee Created", data: employee})
+         return response.status(201).json({message: "Employee Created"})
       } catch (error) {
          return response.sendStatus(400);
       }
