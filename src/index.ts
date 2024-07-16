@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import routes from './routes/EmployeeRoutes';
+import routes from './modules/employee/routes/EmployeeRoutes';
 
 const app = express();
 app.use(express.json());

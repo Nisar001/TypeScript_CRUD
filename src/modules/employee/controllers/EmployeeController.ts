@@ -1,5 +1,5 @@
 import express from 'express'
-import { EmployeeModel } from '../model/EmployeeModel'
+import { EmployeeModel } from '../../../model/EmployeeModel'
 
 class EmployeeController{
    
